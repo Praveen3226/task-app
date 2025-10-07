@@ -5,7 +5,7 @@ import Task from '../models/Task.js';
 
 const router = express.Router();
 
-// GET /api/tasks  => all tasks for logged-in user
+// GET /api/tasks  
 router.get('/', auth, async (req, res) => {
   try {
     const tasks = await Task.find({ user: req.user.id }).sort({ createdAt: -1 });
@@ -16,7 +16,7 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-// POST /api/tasks -> create task
+// POST /api/tasks 
 router.post('/', auth, async (req, res) => {
   const { title, description, priority } = req.body;
   try {
@@ -29,7 +29,7 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
-// PUT /api/tasks/:id -> update task
+// PUT /api/tasks/:id 
 router.put('/:id', auth, async (req, res) => {
   const { title, description, priority, completed } = req.body;
   try {
@@ -43,7 +43,7 @@ router.put('/:id', auth, async (req, res) => {
 
     if (typeof completed === 'boolean') {
       task.completed = completed;
-      task.completedAt = completed ? new Date() : null; // ✅ Set timestamp
+      task.completedAt = completed ? new Date() : null; 
     }
 
     await task.save();
@@ -54,7 +54,7 @@ router.put('/:id', auth, async (req, res) => {
   }
 });
 
-// DELETE /api/tasks/clear -> clear completed tasks for user
+// DELETE /api/tasks/clear 
 router.delete('/clear', auth, async (req, res) => {
   try {
     await Task.deleteMany({ user: req.user.id, completed: true });
@@ -65,7 +65,7 @@ router.delete('/clear', auth, async (req, res) => {
   }
 });
 
-// DELETE /api/tasks/:id -> delete specific task
+// DELETE /api/tasks/:id 
 router.delete('/:id', auth, async (req, res) => {
   try {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -76,7 +76,7 @@ router.delete('/:id', auth, async (req, res) => {
     if (!task) return res.status(404).json({ msg: 'Task not found' });
     if (task.user.toString() !== req.user.id) return res.status(401).json({ msg: 'Not authorized' });
 
-    await task.deleteOne(); // ← Use deleteOne instead of remove
+    await task.deleteOne(); 
     res.json({ msg: 'Task removed' });
   } catch (err) {
     console.error(err);
