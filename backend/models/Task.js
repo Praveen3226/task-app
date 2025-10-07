@@ -1,4 +1,3 @@
-// models/Task.js
 import mongoose from 'mongoose';
 
 const TaskSchema = new mongoose.Schema({
@@ -7,7 +6,7 @@ const TaskSchema = new mongoose.Schema({
   description: { type: String },
   priority: { type: String, enum: ['High', 'Medium', 'Low'], default: 'Low' },
   completed: { type: Boolean, default: false },
-  completedAt: { type: Date }, // ← timestamp for completed tasks
+  completedAt: { type: Date }, 
 }, { timestamps: true });
 
 export default mongoose.model('Task', TaskSchema);
