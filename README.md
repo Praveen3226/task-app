@@ -125,9 +125,9 @@ Frontend runs on http://localhost:3000
 
 # Deployment
 
-## You can deploy:
+ You can deploy:
 
-## Backend & Frontend on Render Separate Repo and Separate Web Services 
+ Backend & Frontend on Render Separate Repo and Separate Web Services 
 
 # Live Demo
 
