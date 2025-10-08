@@ -102,7 +102,7 @@ Frontend runs on http://localhost:3000
 - 4.	You’ll be redirected to /dashboard
 - 5.	Start adding and managing your tasks 
 
- #API Endpoints
+# API Endpoints
 ## Auth Routes
 ## Method	Endpoint	Description
 - POST	/api/auth/register	Register new user
@@ -129,8 +129,7 @@ Frontend runs on http://localhost:3000
 
 ## Backend & Frontend on Render Separate Repo and Separate Web Services 
 
-
- # Live Demo
+# Live Demo
 
 ## Live Demo: https://frontend-os7b.onrender.com
 
