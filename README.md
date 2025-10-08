@@ -73,7 +73,7 @@ project-root/
   - NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
 # Setup Instructions
-##Clone the repository
+## Clone the repository
 - git clone https://github.com/yourusername/task-manager.git
 - cd task-manager
 
@@ -104,12 +104,12 @@ Frontend runs on http://localhost:3000
 
  #API Endpoints
 ## Auth Routes
-##Method	Endpoint	Description
+## Method	Endpoint	Description
 - POST	/api/auth/register	Register new user
 - POST	/api/auth/login	Login user and get JWT
 
 ## Task Routes (Protected)
-##Method	Endpoint	Description
+## Method	Endpoint	Description
 - GET	/api/tasks	Get all tasks for logged-in user
 - POST	/api/tasks	Create a new task
 - PUT	/api/tasks/:id	Update existing task
@@ -130,7 +130,7 @@ Frontend runs on http://localhost:3000
 ## Backend & Frontend on Render Separate Repo and Separate Web Services 
 
 
- #Live Demo
+ # Live Demo
 
 ## Live Demo: https://frontend-os7b.onrender.com
 
