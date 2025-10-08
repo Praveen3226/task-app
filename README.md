@@ -1,6 +1,6 @@
-Task Manager App
+# Task Manager App
 
-A full-stack Task Management System built with Next.js, Express.js, MongoDB, and JWT Authentication.
+## A full-stack Task Management System built with Next.js, Express.js, MongoDB, and JWT Authentication.
 Manage your daily tasks with ease — add, edit, mark complete, filter, and delete.
 
 Tech Stack
